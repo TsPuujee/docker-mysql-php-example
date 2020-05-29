@@ -1,0 +1,3 @@
+FROM mysql:latest
+ENV MYSQL_ROOT_PASSWORD my_secret_pw_shh
+ENV MYSQL_DATABASE test_db
