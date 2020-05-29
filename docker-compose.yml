@@ -15,7 +15,7 @@ services:
       webservices:
         ipv4_address: 172.28.0.4
     ports:
-      - "8080:80"
+      - "80:80"
     volumes:
       - .:/app/
     links:
@@ -37,8 +37,11 @@ services:
     build:
       context: .
       dockerfile: docker/mysql/Dockerfile
+    # ports:
+    #   - "3306:3306"
     networks:
       webservices:
         ipv4_address: 172.28.0.3
     # command: --default-authentication-plugin=mysql_native_password
     restart: always
+    
